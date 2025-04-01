@@ -2,6 +2,11 @@
 
 This is an example MCP server that retrieves account positions from IBKR.
 
+## Screenshot
+
+![Screenshot](doc/screenshot.png)
+
+
 ## Prerequisites
 
 *   Node.js
@@ -12,17 +17,17 @@ This is an example MCP server that retrieves account positions from IBKR.
 ## Installation
 
 
-1.  Clone this repository:
+1.  Clone this repository and install dependencies:
 
     ```bash
-    git clone [repository URL]
+    git clone https://github.com/ciri/ibkr-mcp-ts.git
     cd ibkr-mcp-ts
     npm install
     ```
 
 2.  Configure your IBKR connection:
 
-    *   Edit the `server.ts` file to set the correct port for your IBKR TWS (7496) or IB Gateway (4001).
+    *   Edit the `server.ts` file to set the correct port for your IBKR TWS (7496) or IB Gateway (4001, default).
 
 3.  Set up MCPHost:
 
@@ -39,7 +44,9 @@ This is an example MCP server that retrieves account positions from IBKR.
 
 ## Running the Server
 
-Start MCPHost with the configuration file:
+First, make sure that you are logged into IBKR TWS or IB Gateway.
+
+Then, start MCPHost with the configuration file:
 
 ```bash
 mcphost -m ollama:qwen2.5 --config  ./config.json
@@ -52,7 +59,7 @@ Add the following to your MCP configuration file (`config.json`):
 ```json
 {
   "mcpServers": {
-    
+    ...   
     "ibkr": {
       "command": "node",
       "args": ["/path/to/ibkr-mcp-ts/dist/server.js"],
