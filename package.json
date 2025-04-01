@@ -1,0 +1,23 @@
+{
+  "name": "ibkr-mcp-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.13.16",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.8.0",
+    "@stoqey/ib": "^1.5.1",
+    "tsx": "^4.19.3",
+    "zod": "^3.24.2"
+  }
+}
